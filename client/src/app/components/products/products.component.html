@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Pagina Produtos</h1>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <a *ngIf="authService.loggedIn()" routerLink="./newProduct" class="btn btn-primary">Criar Produto</a>
+            <br><br><br>
+            <ul class="list-group">
+                <li *ngFor="let product of products" class="list-group-item">
+                    <h2>{{ product.name }}</h2>
+                    <br>
+                    <h4 class="text-success">R$ {{ product.value }}</h4>
+                    <hr>
+                    <a class="btn btn-success" > Comprar </a>
+                    <a class="btn btn-primary" [routerLink]=[product._id]> Detalhes </a>
+                     
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6"><router-outlet></router-outlet></div>
+    </div>
+</div> 
+

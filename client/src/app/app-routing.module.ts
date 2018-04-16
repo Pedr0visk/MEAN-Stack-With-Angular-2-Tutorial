@@ -58,6 +58,10 @@ const appRoutes: Routes = [
     component: PublicProfileComponent, // Public Profile Route
     canActivate: [AuthGuard] // User must be logged in to view this route
   },
+  {
+    path: 'products',
+    loadChildren: 'app/components/products/products.module#ProductsModule',
+  },
   { path: '**', component: HomeComponent } // "Catch-All" Route
 ];
 

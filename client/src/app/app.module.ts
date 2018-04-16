@@ -1,3 +1,4 @@
+import { ProductsModule } from './components/products/products.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -33,7 +34,7 @@ import { PublicProfileComponent } from './components/public-profile/public-profi
     BlogComponent,
     EditBlogComponent,
     DeleteBlogComponent,
-    PublicProfileComponent
+    PublicProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,8 @@ import { PublicProfileComponent } from './components/public-profile/public-profi
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
-    FlashMessagesModule
+    FlashMessagesModule,
+    ProductsModule
   ],
   providers: [AuthService, AuthGuard, NotAuthGuard, BlogService],
   bootstrap: [AppComponent]
